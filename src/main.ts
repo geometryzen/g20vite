@@ -10,3 +10,11 @@ board.rectangle({
     strokeOpacity: 0.6
 })
 
+window.onunload = function () {
+    try {
+        board.dispose()
+    }
+    catch (e) {
+        console.warn(`${e}`)
+    }
+}
